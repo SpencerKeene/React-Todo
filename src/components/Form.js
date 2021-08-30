@@ -1,4 +1,4 @@
-const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
+const Form = ({ inputText, setInputText, todos, setTodos, setFilter }) => {
   const inputTextHandler = (e) => {
     setInputText(e.target.value);
   };
@@ -10,8 +10,8 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
     ]);
     setInputText("");
   };
-  const statusHandler = (e) => {
-    setStatus(e.target.value);
+  const filterHandler = (e) => {
+    setFilter(e.target.value);
   };
 
   return (
@@ -26,7 +26,7 @@ const Form = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
         <i className="fas fa-plus-square"></i>
       </button>
       <div className="select">
-        <select name="todos" className="filter-todo" onClick={statusHandler}>
+        <select name="todos" className="filter-todo" onClick={filterHandler}>
           <option value="all">All</option>
           <option value="completed">Completed</option>
           <option value="uncompleted">Uncompleted</option>

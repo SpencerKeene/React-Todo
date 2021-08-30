@@ -49,7 +49,7 @@ function App() {
         setInputText={setInputText}
         todos={todos}
         setTodos={setTodos}
-        setStatus={setFilter}
+        setFilter={setFilter}
       />
       <TodoList
         todos={todos}
